@@ -96,7 +96,7 @@ app.get("/api/users/:_id/logs", async (req, res) => {
           log.push({
             description: e.description,
             duration: e.duration,
-            date: toString(new Date(e.date).toDateString())
+            date: new Date(e.date).toDateString()
           })
           i++;
         }
@@ -104,7 +104,7 @@ app.get("/api/users/:_id/logs", async (req, res) => {
           log.push({
             description: e.description,
             duration: e.duration,
-            date: toString(new Date(e.date).toDateString())
+            date: new Date(e.date).toDateString()
           })
           i++;
         }
